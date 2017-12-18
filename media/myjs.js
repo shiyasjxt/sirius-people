@@ -160,10 +160,6 @@
             $(".uniForm").addClass("border-container");
         }
 
-        if (currentPage == "news.aspx?newsid=29893&preview=1#Developing") {
-            $(".uniForm").addClass("border-container");
-        }
-
     if( $('.static-team-page').length ){
         $('.tab-pane:not(#all)').each( function(){
             $('#all.tab-pane').append('<h2 class="pane-heading">'+ $(this).attr('id') +'</h2>');
