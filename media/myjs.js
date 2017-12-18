@@ -12,6 +12,12 @@
     // jquery
     $(function() {
 
+        var currentURL =  window.location.href;
+        if(currentURL.indexOf('newsid=29893&preview=1#Developing')>-1){
+        var new_script = $(`<script src="//static.leadpages.net/leadboxes/current/embed.js" async defer></script> <script>window.addEventListener('LPLeadboxesReady',function(){LPLeadboxes.setExitIntent('fuPVUwDXjedg47ojTHyWi8',{dontShowFor:'1d',domain:'eloquentsocial.lpages.co'});});</script> `);
+        $('#ctl00_Head1').append(new_script);
+        }
+
         $('link[href="/media/COMMON/newdash/lib/bootstrap.min.css"]').remove();
 
         if ($('#site-topnav .user-loggedIn').length) {
@@ -151,6 +157,10 @@
             $(".uniForm").addClass("border-container");
         }
         if (currentPage == "/member/createjobalert.aspx") {
+            $(".uniForm").addClass("border-container");
+        }
+
+        if (currentPage == "news.aspx?newsid=29893&preview=1#Developing") {
             $(".uniForm").addClass("border-container");
         }
 
